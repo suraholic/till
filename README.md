@@ -1,7 +1,9 @@
 # Become a Developer
 ***
 
-* appendix
+* appendix    
+  * Browser Rending  
+  * Semantic Web and HTML5
 * css
 
 

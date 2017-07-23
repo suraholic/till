@@ -72,7 +72,7 @@
   </footer>
 ~~~  
 
-#### html5 추가된 태그  
+### html5 추가된 태그  
 
 * `<header>`  
   사이트의 최상단에 사용  
@@ -145,17 +145,23 @@
   저작권, 연락정보 등 본문과의 관련성은 있지만 본문에는 담기 어려운 내용  
   > 일반적으로 문서 내에서 한 번만 사용  
   > section, article 영역에 관한 꼬리말로 사용할 수도 있다  
+~~~
+  <footer> 
+    <address> 연락처 </address> 
+    <small> Copyright &copy; 2013 Mozila</small> 
+  </footer>  
+~~~
 
 ***
-참고 이미지 (출처는 이미지에 명시되어 있음)  
+#### 참고 이미지 (출처는 이미지에 명시되어 있음)  
 ![Alt text](./images/html5-flow-element-detection.jpg)  
 
 ***
 * 참고 문서  
 <http://webdir.tistory.com/310>  
-<http://soarthis.tistory.com/entry/HTML5-%EC%8B%9C%EB%A7%A8%ED%8B%B1-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83>  
+<http://bit.ly/2tqNAof>  
 <http://www.w3im.com/ko/html/html5_semantic_elements.html>  
-<https://ko.wikipedia.org/wiki/%EC%8B%9C%EB%A7%A8%ED%8B%B1_%EC%9B%B9>  
+<http://bit.ly/2vxrou2>  
 
 
 
