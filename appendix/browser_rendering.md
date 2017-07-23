@@ -59,7 +59,8 @@
 3. 렉싱 : 토큰은 해당 속성 및 규칙을 정의하는 '객체'로 변환
 4. DOM (CSSOM) 생성 : 객체는 트리 데이터 구조로 생성됨
 
-> DOM (HMTL) 은 컨텐츠를 나타내며, CSSOM (CSS)는 컨텐츠에 적용되는 스타일 규칙으로 서로 독립적인 객체 (DOM + CSSOM = Render Tree)
+> DOM (HMTL) 은 컨텐츠를 나타내며, CSSOM (CSS)는 컨텐츠에 적용되는 스타일 규칙으로 서로 독립적인 객체  
+> (DOM + CSSOM = Render Tree)
 
 ***
 
