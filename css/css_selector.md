@@ -213,7 +213,7 @@
 
 ## 가상 클래스 셀렉터 (Pseudo-Class Selector)  
 
-클래스가 존재하지 않지만, 요소의 특성 상태에 따라 클래스를 임의로 지정하여 스타일을 정의해준다.  
+클래스가 존재하지 않지만, 요소의 특정 상태에 따라 클래스를 임의로 지정하여 스타일을 정의해준다.  
 가상 클래스는 (.) 마침표 대신에 (:)을 사용하며, CSS 표준에 의해 미리 정의된 이름이 있기 때문에 임의로 정의 할 수 없다.  
 
 ### 링크 셀렉터 (Link Pseudo-Class), 동적 셀렉터 (User action Pseudo-Class)  
@@ -291,9 +291,9 @@
   </style>  
 
   <body>
-   <input type="text" value="Text input"> 
-   <input type="email" value="email input">
-   <input type="password" value="Password input"> 선택!!
+   <input type="text" value="Text input"> yellow 선택
+   <input type="email" value="email input"> yellow 선택
+   <input type="password" value="Password input"> 선택 안됨!!
   </body>
 ~~~
 

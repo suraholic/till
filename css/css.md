@@ -13,7 +13,7 @@
 ***
 
 ## HTML에서 CSS 연동  
-  1. HTML 내부어 CSS 포함 (Embedding style)  
+  1. HTML 내부에 CSS 포함 (Embedding style)  
   ~~~
   <!DOCTYPE html>
   <html>
