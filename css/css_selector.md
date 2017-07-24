@@ -245,40 +245,68 @@
 
 ### 구조 가상 클래스 셀렉터(Structural pseudo-classes)  
 
-*  `:first-child` : 셀렉터에 해당하는 모든 요소 중 첫번째 자식 요소 선택  
-* `:last-child` : 셀렉터에 해당하는 모든 요소 중 마지막 자식 요소 선택  
-* `:nth-child(n)` : 셀렉터에 해당하는 모든 요소 중 앞에서 n번째 자식 요소 선택  
-* `nth-last-child(n)` : 셀렉터에 해당하는 모든 요소 중 뒤에서 n번째 자식 요소 선택  
+*  `:first-child` : 부모 요소안에 첫번째 자식 요소만 선택
+* `:last-child` : 부모 요소안에 마지막  자식 요소만 선택
+
+* `:nth-child(n)` : 모든 자식 요소들 중 앞에서 n번째 요소 선택    
+* `:nth-last-child(n)` : 모든 자식 요소들 중 마지막 요소 선택  
+   > 형제요소들도 순서에 포함되어 n번째 요소가 셀렉터와 일치해야 선택 됨  
+
+* `:first-of-type` : 셀렉터와 일치하는 첫번째 요소 선택  
+* `:last-of-type` : 셀렉터와 일치하는 마지막 요소 선택 
+* `:nth-of-type(n)` : 셀렉터와 일치하는 n번째 요소 선택  
+* `nth-last-of-type(n)` : 셀렉터와 일치하는 요소 중 뒤에서 n번째 요소 선택
+  > 셀렉터와 일치하는 요소만 순서에 포함
 ~~~
-  <style>
-   p:first-child { color: red; } 
-   p:last-child { color: blue; }
+ <style>
+ /* 
+    예제1) 1번예제는 아무 변화가 없다.
+    이유는 부모요소(div)의 자식으로 p 태그가 첫번째 자식으로 위치 해야 :first-child 가 적용되는데 2번째 이기때문이다.
+  */
 
-   ol > li:nth-child(2)  { color: orange; } 
-   ol > li:nth-last-child(2) { color: red; }
-  </style>
- 
-  <body>
-   <p> p요소중 첫번째 자식 : red 선택 </p> 
-   <h1> 지정된 셀렉터 아님 </h1>
-   <p> p요소지만 선택사항 없음 </p>
-   <div>
-    <p> div요소의 첫번째 p이기 때문에 : red 선택 </p>
-    <p> 여기가 마지막 p 자식 : blue 선택 </p>
-   </div>
+  div p:first-child {    
+     /* div의 첫번째 자식이 p인 요소들은 배경색을 변경한다. */
+      background: #ff0000;
+  }
 
-   <ol>
-    <li>Espresso</li>
-    <li> nth-child(2) : orange 선택 됨 </li>
-    <li>Caffe Latte</li>
-    <li>Caffe Mocha</li>
-    <li> :nth-last-child(2) : red 선택 됨</li>
-    <li>Cappuccino</li>
-   </ol>
-  </style>
+  /* 
+    예제1) 2번예제도 아무변화가 없다.
+    div를 명시하지 않고 다음과 적으면 문서전체에서 찾는다. 
+    즉 child라는 의미를 상기하자 (자식인 요소만 적용된다는거..)
+    p태그가 xxx부모요소의 첫번째 자식이면 다음 CSS를 적용된다.
+  */
+  p:first-child {
+      background: #ff0000;
+  }
+
+  /* 
+    예제3) 1번,2번예제의 문제를 해결할 3번째..
+    :first-of-type는 tag type의 순서로 선택된다.
+    p태그가 xxx부모요소의 첫번째 type이면 다음 CSS가 적용된다. 
+  */
+  
+  p:first-of-type {
+      background: #ff0000;
+  }
+</style>
+
+<body>
+    <div>
+        <div>div태그1번</div>
+        <p>p태그1번 => red 배경 적용 </p>
+        <p>p태그2번</p>
+    </div>
+    <ul>
+        <li>
+            <h1>h1태그 1번</h1>
+            <p>p태그1번 => red 배경 적용 </p>
+            <p>p태그2번</p>
+        </li>
+    </ul>
+</body>
 ~~~  
-> ol > li:nth-child(2n) 짝수번째 요소만 선택  
-> ol > li:nth-child(2n+1) 홀수번째 요소만 선택 
+> :nth-child(2n) 짝수번째 요소만 선택  
+> :nth-child(2n+1) 홀수번째 요소만 선택 
 
 ### 부정 셀렉터(Negation pseudo-class)  
 * `not(셀렉터)` : 셀렉터에 해당하지 않는 모든 요소 선택  
