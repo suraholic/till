@@ -304,6 +304,8 @@
         </li>
     </ul>
 </body>
+
+/* 참고문서 : http://mylife365.tistory.com/162 */
 ~~~  
 > :nth-child(2n) 짝수번째 요소만 선택  
 > :nth-child(2n+1) 홀수번째 요소만 선택 
