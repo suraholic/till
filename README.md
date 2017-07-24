@@ -6,7 +6,8 @@
   * Semantic Web and HTML5
 * css
   * css
-  * css selector
+  * css selector  
+  * css layout  
 
 
 
