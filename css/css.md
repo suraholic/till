@@ -124,6 +124,38 @@
 </style>
 ~~~  
 
+*** 
+
+#### 웹폰트 (Web Font)  
+사용자 (클라이언트 PC) 에게 css에 정의한 폰트가 없다면 서버에서 전송받아 폰트를 적용  
+
+* CDN(Content Delivery Network) 링크 방식  
+~~~
+  /* google 웹폰트 사용하는 방법 */
+
+  @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+* { font-family: 'Nanum Gothic', sans-serif; }
+~~~  
+
+* 서버 폰트 로딩 방식  
+
+~~~
+  @font-face {
+    font-family:"Nanum Gothic";
+    src:url("NanumGothic.eot"); /* IE 9 호환성 보기 모드 대응 */
+    src:local("☺"),             /* local font 사용방지, 생략 가능 */
+        url("NanumGothic.eot?#iefix") format('embedded-opentype'), /* IE 6~8 */
+        url("NanumGothic.woff") format('woff'); /* 표준 브라우저 */
+  }
+
+  * { font-family: "Nanum Gothic", sans-serif; }
+~~~
+> 폰트 파일을 서버에 두고 요청이 오면 클라이언트로 전송하는 방식  
+>  브라우저에 따라 지원하는 폰트 파일 형식이 다르기 때문에 파일 형식을 고려해야 한다.  
+
+> 영문과 한글을 따로 지정 할 때는 영문 폰트 먼저, 그 다음 한글 폰트 지정 한다.    
+> 한글 폰트부터 지정하면 영문에도 한글 폰트가 지정된다.
 
  
 
