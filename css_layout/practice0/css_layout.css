@@ -1,0 +1,112 @@
+/*Simple Reset CSS*/
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #58666e;
+  background-color: #f0f3f4;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjus: 100%;  /* iphone font size 변경 방지 */
+}
+li { list-style: none; }
+a { text-decoration: none; }
+
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 10px 5px;
+}
+h1 { font-size: 1.8em; }
+
+.warp {
+  width:100%;
+  margin: 60px 0 60px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  line-height: 60px; /* heigt와 같이 줘야 중앙정렬 가능 */
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05);
+
+}
+
+.logo { 
+  width: 100px; 
+  margin-left: 20px;
+  font-size: 20px; 
+  font-weight: bold;
+  float: left;
+  
+}
+nav {
+  float: right;
+  width: 400px;
+}
+
+nav li {
+  display: inline-block;
+  padding-left: 30px;
+}
+nav li>a {color: #58666e;}
+nav li>a:hover { 
+  color: #121212; 
+  font-weight: bold;
+}
+
+.container {
+  width: 100%;
+  overflow: hidden;  /*  float 속성이 선언된 두개의 자식 요소를 포함하는 부모 요소의 높이가 정상적인 값을 가지지 못하는 문제를 해결 */
+  margin-top: 60px;  /* fixed한  height만큼 떨어뜨려준다 */
+}
+aside {
+  width: 200px;
+  position: fixed;
+  top: 60px;
+  bottom: 0;
+  background-color: #292929;
+  color: white;
+}
+aside>h1 {padding-left: 10px; line-height: 100px;}
+aside li > a {
+  display: block;
+  padding: 10px 0 10px 20px;
+  color: white; 
+}
+
+aside li > a.active {
+  font-weight: bold;
+  background-color: #4caf50;
+}
+
+aside li>a:hover:not(.active) {
+  background-color: #555;
+}
+
+section {
+  float: right;
+  margin-left: 200px;
+}
+
+article {
+  background-color: white;
+  /*margin: 10px;*/
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 25px;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  line-height: 60px;
+  border-top: 1px solid #dee5e7;
+  background-color: #f2f2f2;
+  padding: 0 20px;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS Grid Layout</title>
+  <style>
+   /* Start of Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Poppins, Helvetica, Arial, sans-serif";
+    color: #3000033;
+    font-size: 14px;
+    line-height: 1.42857143;  /* 14px * 1.42857143 = 20px */
+    background-color: #fff;
+  }
+ 
+  .container { 
+    padding: 20px;
+  }
+
+  p { text-align: left;}
+  .row {
+     background-color: #ccc; 
+  }
+  .row::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+   
+  .col-1 { width: 8.33333333%; }
+  .col-2 { width: 16.66666667%; }  
+  .col-3 { width: 25%;}
+  .col-4 { width: 33.33333333%;}
+  .col-5 { width: 41.66666665%}
+  .col-6 { width: 50% }
+  .col-7 { width: 58.33333335%}
+  .col-8 { width: 66.6066666667%}
+  .col-9 { width: 75%}
+  .col-10 { width: 83.33333333%}
+  .col-11 { width: 91.66666667% }
+  .col-12 { width: 100%;}
+
+  [class |= "col"] {
+    float: left;
+    padding: 20px;
+    border: 1px solid white;
+    text-align: center;
+  }
+
+  .blank { margin-bottom: 20px;}
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <h1 class="blank"> Layout Example </h1>
+
+    <div class="row">
+      <div class="row">
+        <div class="col-12">
+          <p> navigation </p>    
+        </div>
+      </div> <!-- row1-->
+
+      <div class="row">
+        <div class="col-2">
+          <p>html</p>
+          <p>css</p>
+        </div>
+
+        <div class="col-8">
+            <div>
+              <h2>Main Section</h2>
+              <p class="blank">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates dolorum, quam vero quia architecto accusantium blanditiis, animi atque ab laborum, tempora suscipit reprehenderit at veniam tenetur excepturi. Ad, assumenda, perspiciatis.</p>
+             
+              <div class="col-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates dolorum, quam vero quia architecto accusantium blanditiis, animi atque ab laborum, tempora suscipit reprehenderit at veniam tenetur excepturi. Ad, assumenda, perspiciatis.</div>
+              <div class="col-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates dolorum, quam vero quia architecto accusantium blanditiis, animi atque ab laborum, tempora suscipit reprehenderit at veniam tenetur excepturi. Ad, assumenda, perspiciatis.</div>
+              <div class="col-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates dolorum, quam vero quia architecto accusantium blanditiis, animi atque ab laborum, tempora suscipit reprehenderit at veniam tenetur excepturi. Ad, assumenda, perspiciatis.</div>                                
+            
+              <div class="col-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates dolorum, quam vero quia architecto accusantium blanditiis, animi atque ab laborum, tempora suscipit reprehenderit at veniam tenetur excepturi. Ad, assumenda, perspiciatis.</div>
+              <div class="col-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates dolorum, quam vero quia architecto accusantium blanditiis, animi atque ab laborum, tempora suscipit reprehenderit at veniam tenetur excepturi. Ad, assumenda, perspiciatis.</div>
+
+              <div class="col-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates dolorum, quam vero quia architecto accusantium blanditiis, animi atque ab laborum, tempora suscipit reprehenderit at veniam tenetur excepturi. Ad, assumenda, perspiciatis.</div>
+               <div class="col-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates dolorum, quam vero quia architecto accusantium blanditiis, animi atque ab laborum, tempora suscipit reprehenderit at veniam tenetur excepturi. Ad, assumenda, perspiciatis.</div>
+              
+            </div>
+        </div> <!-- col-8 end -->
+        <div class="col-2">
+          <p>comment</p>
+          <p>news</p>
+        </div> 
+      </div> <!-- row2 -->
+
+      <div class="row">
+          <div class="col-12">
+            <p> footer </p>
+          </div>
+      </div> <!-- row3 -->
+
+    </div> 
+  </div> <!-- container end -->
+</body>
+</html>
