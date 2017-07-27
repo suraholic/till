@@ -22,8 +22,8 @@
   > `fonst-size:0px` input text영역과 button영역 사이 공백없애기      (부모에게)  
   > `button` css로 꾸미기  
 
-  * 20170728 Grid Layout
-    12 컬럼으로 분활하여 레이아웃을 구성하는 방법
+* 20170728 Grid Layout
+  12 컬럼으로 분활하여 레이아웃을 구성하는 방법
   
 
 
