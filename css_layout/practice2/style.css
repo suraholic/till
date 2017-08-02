@@ -1,0 +1,157 @@
+
+/* @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css); */
+
+/*Simple Reset CSS*/
+
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Spoqa Han Sans", Arial, sans-serif;
+  color: #222324;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjus: 100%;  /* iphone font size 변경 방지 */
+  font-size: 14px;
+}
+li { list-style: none; }
+a:link, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+input[type="button"] { cursor: pointer;}
+
+h1 { 
+  font-size: 59px;
+  text-align: left;
+  font-weight: lighter;
+}
+
+h2 { 
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+
+.warp { width: 100%; margin: 0;}
+header { height: 68px; padding: 11px; font-size: 1.3em;}
+.logo {  
+  width: 8.3%;
+  float: left;
+  text-align: center;
+}
+
+.showfolio {
+  font-weight: bold;
+  line-height: 38px;
+  float: left;
+}
+
+nav ul {
+  float : right;
+  margin-right: 160px;
+}
+nav li {
+  display: inline-block;
+  padding: 10px 40px;
+}
+
+nav li:hover { color: #43f3d0;}
+nav::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.page1 { 
+  width: 100%;
+  background: url("./images/main.png") no-repeat;
+  background-size: cover;
+  color: #ffffff;  
+}
+.page2 { width: 100%;}
+.page3 { width: 100%; background-color: #000; color: #fff;}
+
+.contBox { 
+  margin-left: 9%;
+  margin-right: 9%;  
+  width: 82%;
+}
+.contBox2 {
+  margin-left: 9%;
+  margin-right: 9%;  
+  width: 82%;
+}
+
+.info { width: 100%; margin-top: 210px;}
+.info::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.info ul { 
+  width: 33.3333333%;
+  float: left;
+  line-height:  1.1em;
+  margin-bottom: 60px;
+}
+.info li:nth-child(1) { padding-top: 20px; padding-bottom: 12px;}
+.info h2 {
+  font-size: 16px;
+  font-weight: lighter;
+}
+.line1 { border-top: 1.5px solid #fff; }
+.line2 { border-top: 1.5px solid #43f3d0;}  
+
+.photo ul { width: 100%; font-size: 0;}
+.photo li {
+  display: inline-block;
+  width: 25%;
+  padding: 0px;
+  margin: 0px;
+}
+.photo img { width: 100%;}
+
+.txtLeft { text-align: left; }
+.txtCenter { text-align: center; }
+.txtRight { text-align: right; }
+.txt_green { color: #43f3d0;}
+.txt_gray { color: #555555;}
+.txt_pink { color: #e35087;}
+
+.contBox2 ul {width: 100%; padding-top: 90px; margin: 0px;}
+.contBox2 li { display: inline-block; vertical-align: top;}
+.contBox2 .tit { width: 10%; }
+.contBox2 .cont {
+  width: 34%;  
+  text-align: left;
+}
+.contBox2 .date { margin-top: 25px; color: #555555;}
+.twitterBox { 
+  padding: 10px; 
+  width: 29.5%;
+  word-wrap: break-word;
+}
+.twitter {
+  border-top: 1.5px solid #55acee;
+  margin-top: 100px;
+}
+.twitter a, a:hover { color: #55acee;}
+
+footer { 
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 60px;
+  font-size: 17px;
+  font-weight: bold;
+  background-color: #000;
+  color: #fff;
+}
+
+footer li { display: inline-block; text-align: center; vertical-align: top; }
+footer .logo { width: 8.3%; text-align: center;}
+footer .ftit { width: 8%;}
+footer .fcont {width: 16%;}
