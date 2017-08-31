@@ -51,7 +51,7 @@ header { height: 68px; padding: 11px; font-size: 1.3em;}
 
 nav ul {
   float : right;
-  margin-right: 160px;
+  margin-right: 50px;
 }
 nav li {
   display: inline-block;
@@ -65,9 +65,26 @@ nav::after {
   clear: both;
 }
 
+
+.h-menu{
+  display: block;
+  float: right;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.t, .m, .b{
+  display: block;
+  height: 3px;  
+  background: #fff;
+  margin-bottom: 10px;
+}
+
 .page1 { 
   width: 100%;
-  background: url("./images/main.png") no-repeat;
+  height: auto;
+  background: url("./images/main.png") no-repeat center center fixed;
   background-size: cover;
   color: #ffffff;  
 }
@@ -155,3 +172,34 @@ footer li { display: inline-block; text-align: center; vertical-align: top; }
 footer .logo { width: 8.3%; text-align: center;}
 footer .ftit { width: 8%;}
 footer .fcont {width: 16%;}
+
+/* 모바일  */
+@media screen and (min-width:320px) and (max-width:767px){
+  .showfolio{
+    display: none;
+  }
+  nav{
+    display: none;
+  }
+  .h-menu{
+    display: block;
+  }
+}
+/* 테블릿  */
+@media screen and (min-width:768px) and (max-width:1199px){
+  .showfolio{
+    display: none;
+  }
+  nav li{
+    padding: 10px 20px
+  }
+  .h-menu{
+    display: none;
+  }
+}
+/* 데스크 탑  */
+@media screen and  (min-width:1200px){
+  .h-menu{
+    display: none;
+  }
+}
